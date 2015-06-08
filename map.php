@@ -1,6 +1,6 @@
 <?php
 $mapArray = array(
-	"4468" => 1002847, //CF-CM-TEST
+	"4468" => 1001515, //CF-CM-TEST
 );
 if(isset($_GET['z'])){
 	$newZone = $mapArray[$_GET['z']];
