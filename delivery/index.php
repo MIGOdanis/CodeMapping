@@ -1,8 +1,5 @@
 <?php
-$mapArray = array(
-	"4029" => 717
-);
-
+include("../zons.php");
 if(isset($_GET['iframe'])){
 ?>
 <html>
@@ -19,14 +16,16 @@ if(isset($_GET['z'])){
 $newZone = $mapArray[$_GET['z']];
 if(isset($newZone) && $newZone > 0){
 ?>
-<script type='text/javascript'>
-ac_as_id = <?php echo $newZone ?>;
-ac_format = 0;
-ac_mode = 1; 
-ac_group_id = 1; 
-ac_server_base_url ='iped.mlt01.com/';
-</script> 
-<script type='text/javascript' src='http://static.mlt01.com/k.js'></script>
+<script type="text/javascript">
+	tosAdspaceInfo = {
+		'aid':<?php echo $newZone ?>,
+		'serverbaseurl':'tad.doublemax.net/',
+		'staticbaseurl':'static.doublemax.net/js/'
+	}
+</script>
+<script type="text/javascript" src="http://static.doublemax.net/js/tr.js">
+</script>
+
 <?php
 }
 }
@@ -46,7 +45,7 @@ ac_server_base_url ='iped.mlt01.com/';
 		if(isset($newZone) && $newZone > 0){
 			$json['status'] = 0;
 			$json['result'] = 0;
-			$json['html'] = "<script type=\"text/javascript\"> ac_as_id = ".$newZone."; ac_format = 0;  ac_mode = 1; ac_group_id = 1; ac_server_base_url =\"iped.mlt01.com/\";</script> <script type=\"text/javascript\" src=\"http://static.mlt01.com/k.js\"></script>";		
+			$json['html'] = "<script type='text/javascript'>tosAdspaceInfo ={'aid':" . $newZone . ",'serverbaseurl':'tad.doublemax.net/','staticbaseurl':'static.doublemax.net/js/'}</script><script type='text/javascript' src='http://static.doublemax.net/js/tr.js'>";		
 
 		}else{
 			$json['msg'] = "Not find new id";
@@ -57,4 +56,7 @@ ac_server_base_url ='iped.mlt01.com/';
 	header('Content-Type: application/javascript');
 	echo "var cfad_json_".$_GET['z']." = JSON.stringify(" . json_encode($json) . ")";
 }
+
+if(isset($mapArray))
+	unset($mapArray);
 ?>
