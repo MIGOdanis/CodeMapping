@@ -1,4 +1,4 @@
-var domain = "//103.17.10.57";
+var domain = "//ads.doublemax.net";
 
 // function rand(){
 //  	return Math.floor(Math.max(0, Math.random() * (9+1)));
