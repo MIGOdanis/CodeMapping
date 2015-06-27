@@ -24,10 +24,10 @@ for (var i = 0; i < cf_mobiles.length; i++) {
 
 if(cf_isMobile != true) {
 	if(cf_adtype != null){
-		document.write("<script src='//events.doublemax.net/adx/map.php?"+q+"&sn=' ></script>");
+		document.write("<script src='//ads.doublemax.net/adx/map.php?"+q+"&sn=' ></script>");
 	}
 } else if(cf_isMobile = true){
 	if(mf_adtype != null){
-		document.write("<script src='//events.doublemax.net/adx/map.php?"+ads_zone_id+"&sn=' ></script>");
+		document.write("<script src='//ads.doublemax.net/adx/map.php?"+ads_zone_id+"&sn=' ></script>");
 	}
 }

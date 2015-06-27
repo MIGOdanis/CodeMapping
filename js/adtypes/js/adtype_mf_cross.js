@@ -3,7 +3,7 @@ MF CROSS 1.5
 v 141021
 */
 
-var cf_base_url = "//events.doublemax.net/adx/js/adtypes/js/",
+var cf_base_url = "//ads.doublemax.net/adx/js/adtypes/js/",
 	cf_adtype = null,
 	mf_adtype = "mf_cross";
 
