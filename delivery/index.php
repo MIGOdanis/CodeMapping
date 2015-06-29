@@ -41,7 +41,7 @@ if(isset($newZone) && $newZone > 0){
 			echo "
 				document.write(\"<div><script type='text/javascript'>tosAdspaceInfo ={'aid':" . $newZone . ",'serverbaseurl':'tad.doublemax.net/','staticbaseurl':'static.doublemax.net/js/'}</script>\");
 				document.write(\"<script type='text/javascript' src='http://static.doublemax.net/js/tr.js'></script></div>\");
-				
+				document.write(\"<script type='text/javascript' src='//eland.doublemax.net/cfdmp/edmp_ads.js'></script></div>\");
 			";
 		}
 	}
@@ -57,7 +57,7 @@ if(isset($newZone) && $newZone > 0){
 		if(isset($newZone) && $newZone > 0){
 			$json['status'] = 0;
 			$json['result'] = 0;
-			$json['html'] = "<script type='text/javascript'>tosAdspaceInfo ={'aid':" . $newZone . ",'serverbaseurl':'tad.doublemax.net/','staticbaseurl':'static.doublemax.net/js/'}</script><script type='text/javascript' src='http://static.doublemax.net/js/tr.js'>";		
+			$json['html'] = "<script type='text/javascript'>tosAdspaceInfo ={'aid':" . $newZone . ",'serverbaseurl':'tad.doublemax.net/','staticbaseurl':'static.doublemax.net/js/'}</script><script type='text/javascript' src='http://static.doublemax.net/js/tr.js'><script type='text/javascript' src='//eland.doublemax.net/cfdmp/edmp_ads.js'>";		
 
 		}else{
 			$json['msg'] = "Not find new id";
