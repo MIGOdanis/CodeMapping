@@ -24,7 +24,7 @@ if(isset($newZone) && $newZone > 0){
 	}
 </script>
 <script type="text/javascript" src="http://static.doublemax.net/js/tr.js"></script>
-<!-- <script type="text/javascript" src="//eland.doublemax.net/cfdmp/edmp_ads.js"></script> -->
+<script type="text/javascript" src="//eland.doublemax.net/cfdmp/edmp_ads.js"></script>
 <?php
 }
 }
@@ -40,12 +40,10 @@ if(isset($newZone) && $newZone > 0){
 			echo "
 				document.write(\"<div><script type='text/javascript'>tosAdspaceInfo ={'aid':" . $newZone . ",'serverbaseurl':'tad.doublemax.net/','staticbaseurl':'static.doublemax.net/js/'}</script>\");
 				document.write(\"<script type='text/javascript' src='http://static.doublemax.net/js/tr.js'></script></div>\");
+				document.write(\"<script type='text/javascript' src='//eland.doublemax.net/cfdmp/edmp_ads.js'></script></div>\");
 			";
 		}
 	}
-
-	//document.write(\"<script type='text/javascript' src='//eland.doublemax.net/cfdmp/edmp_ads.js'></script></div>\");
-
 }else{
 	$json['status'] = 12;
 	$json['result'] = -1;
