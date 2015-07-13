@@ -32,10 +32,10 @@ if(cf_isMobile != true) {
 			cfad_json = null;
 
 		if(mf_adtype == "mf_cross"){
-			document.write("<link type='text/css' href='//ads.doublemax.net/js/adtypes/css/adtype_detect_style.css' rel='stylesheet'>");
+			document.write("<link type='text/css' href='//cf.doublemax.net/js/adtypes/css/adtype_detect_style.css' rel='stylesheet'>");
 		}
 
 		document.write("<script src='//cf.doublemax.net/delivery/?coverad&z=" + cf_z + "'><\/script>");
-		document.write("<script src='" + cf_base_url + mf_adtype + ".js'><\/script>");
+		document.write("<script src='//cf.doublemax.net/js/adtypes/js/" + mf_adtype + ".js'><\/script>");
 	}
 }
