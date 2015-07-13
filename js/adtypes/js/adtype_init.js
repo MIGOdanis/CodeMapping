@@ -28,6 +28,14 @@ if(cf_isMobile != true) {
 	}
 } else if(cf_isMobile = true){
 	if(mf_adtype != null){
-		document.write("<script src='//ads.doublemax.net/adx/map.php?"+ads_zone_id+"&sn=' ></script>");
+		var cf_z = ads_zone_id,
+			cfad_json = null;
+
+		if(mf_adtype == "mf_cross"){
+			document.write("<link type='text/css' href='//ads.doublemax.net/js/adtypes/css/adtype_detect_style.css' rel='stylesheet'>");
+		}
+
+		document.write("<script src='//cf.doublemax.net/delivery/?coverad&z=" + cf_z + "'><\/script>");
+		document.write("<script src='" + cf_base_url + mf_adtype + ".js'><\/script>");
 	}
 }
