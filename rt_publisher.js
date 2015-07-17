@@ -6,7 +6,7 @@ var domain = "//ads.doublemax.net";
 //var cfadsn = "ad"+rand()+rand()+rand()+rand()+rand()+rand();
 //document.write("<div id='"+cfadsn+"'></div>");
 
-document.write("<script src='"+domain+"/adx/map.php?"+q+"''></script>");
+document.write("<script src='"+domain+"/adx/map.php?"+q+"'></script>");
 // var cfadthispageurl = encodeURIComponent(location.href);
 var cfadelandimg = '<script src="//eland.doublemax.net/cfdmp/edmp_ads.js"></script>'; 
 document.write(cfadelandimg);
